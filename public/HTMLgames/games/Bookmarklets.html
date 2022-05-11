@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<title>
+Bookmarklets
+</title>
+</head>
+<body>
+<h1 class="rainbow">
+OASIS bookmarklets
+</h1>
+<a href="javascript:(function()%7Bjavascript%3A(()%3D%3E%7Bvar%20r%3Ddocument.querySelector(%22.StudentLayout%22)%2Ct%3DObject.keys(r).find(e%3D%3Ee.startsWith(%22__reactFiber%22))%2Cn%3Dr%5Bt%5D.memoizedProps.children%5B2%5D.props.children.props.prompt._root.nodes.find(e%3D%3Ee.entry%26%26e.entry%5B0%5D%3D%3D%22word%22).entry%5B1%5D%3BArray.from(document.querySelectorAll(%22div%22)).find(e%3D%3Ee.innerHTML%3D%3Dn).click()%3B%7D)()%3B%7D)()%3B">Quizzlet live auto</a>
+<br>
+<a href="javascript:(function()%7Bjavascript%3A(()%3D%3E%7Bvar%20c%3Dt%3D%3Enew%20Promise(i%3D%3EsetTimeout(i%2Ct))%2Cl%3Dt%3D%3Et.replace(%2F(%26(%5Ba-z0-9%5D%20%7C%23%5B0-9%5D%7B1%2C6%7D%7C%23x%5B0-9a-f%5D%7B1%2C6%7D)%3B)%20%2Fgi%2C%22%20%22).replace(%2F%3C%5B%5E%3E%5D*%3E%2Fg%2C%22%20%22).replace(%2F%20%7B2%2C%7D%2Fg%2C%22%20%22)%3B(async()%3D%3E%7Blet%20t%3Dawait%20fetch(window.location.href.toString().replace(%22%2Fgravity%22%2C%22%22)).then(e%3D%3Ee.text())%2Ci%3D%5B%5D%3Bfor(let%5Be%2Ca%5Dof%20Object.entries(JSON.parse(t.substring(t.indexOf('(function()%7Bwindow.Quizlet%5B%22setPageData%22%5D%20%3D%20')%2044%2Ct.indexOf('%3B%20QLoad(%22Quizlet.setPageData%22)%3B%7D).call(this)'))).termIdToTermsMap))%7Blet%20n%3Da%3Bi.push(%7Bterm%3An.word.replace(%2F%5Cr%3F%5Cn%7C%5Cr%2Fg%2C%22%20%22)%2Cdefinition%3An.definition.replace(%2F%5Cr%3F%5Cn%7C%5Cr%2Fg%2C%22%20%22)%7D)%7Dlet%20o%3D%22%22%3Bfor(%3B%3B)%7Btry%7Bif(document.querySelector(%22.GravityTerm-text%20%3E%20span%22))%7Blet%20e%3Dl(document.querySelector(%22.GravityTerm-text%20%3E%20span%22).innerHTML)%3Bconsole.log(e)%3Blet%20a%3Ddocument.querySelector(%22.GravityTypingPrompt-input%22)%3Bif(e!%3D%3Do%7C%7Ca.value%3D%3D%3D%22%22)%7Bo%3De%3Blet%20n%3Di.map(r%3D%3E%7Bif(r.term%3D%3De)return%20r.definition%3Bif(r.definition%3D%3De)return%20r.term%7D).filter(r%3D%3Er!%3D%3Dvoid%200)%2Cs%3Dn%5Bn.length-1%5D%3Ba.value%3Ds%7D%7D%7Dcatch%7B%7Dawait%20c(100)%7D%7D)()%3B%7D)()%3B%7D)()%3B">Quizzlet gravity auto</a>
+<br>
+<a href="javascript:(function()%7Bjavascript%3A(()%3D%3E%7Bvar%20s%3Di%3D%3Enew%20Promise(o%3D%3EsetTimeout(o%2Ci))%3B(async()%3D%3E%7Blet%20i%3Dawait%20fetch(window.location.href.toString().replace(%22%2Fmatch%22%2C%22%22)).then(l%3D%3El.text())%2Co%3D%5B%5D%3Bfor(let%5Bl%2Ce%5Dof%20Object.entries(JSON.parse(i.substring(i.indexOf('(function()%7Bwindow.Quizlet%5B%22setPageData%22%5D%20%3D%20')%2044%2Ci.indexOf('%3B%20QLoad(%22Quizlet.setPageData%22)%3B%7D).call(this)'))).termIdToTermsMap))%7Blet%20t%3De%3Bo.push(%7Bterm%3At.word%2Cdefinition%3At.definition%7D)%7Dfor(%3Bdocument.querySelector(%22.MatchModeQuestionGridBoard%22)%3D%3Dnull%26%26document.querySelector(%22.MatchModeQuestionScatterBoard%22)%3D%3Dnull%3B)await%20s(100)%3Blet%20c%3D0%3Bswitch(document.querySelector(%22.MatchModeQuestionScatterBoard%22)%26%26(c%3D1)%2Cc)%7Bcase%200%3A%7Blet%20l%3Ddocument.querySelectorAll(%22.MatchModeQuestionGridBoard-tile%22)%2Ce%3D%5B%5D%3Bfor(let%20t%20of%20Array.from(l))e.push(%7Belement%3At%2Ctext%3At.querySelector(%22.MatchModeQuestionGridTile-text%22).getAttribute(%22aria-label%22)%7D)%3Bfor(let%20t%20of%20e)%7Blet%20a%3Do.map(r%3D%3E%7Bif(r.term%3D%3Dt.text)return%7Bmatch%3Ar.definition%7D%3Bif(r.definition%3D%3Dt.text)return%7Bmatch%3Ar.term%7D%7D).filter(r%3D%3Er!%3D%3Dvoid%200)%5B0%5D%2Cm%3De.filter(r%3D%3Er.text%3D%3Da.match)%2Cn%3Dm%5Bm.length-1%5D%3Bfor(t.element.style.border%3D%222px%20solid%20lime%22%2Cn.element.style.border%3D%222px%20solid%20lime%22%3Bt.element.children.length%3E0%3B)await%20s(100)%3Bt.element.style.border%3D%22none%22%2Cn.element.style.border%3D%22none%22%7Dbreak%7Dcase%201%3A%7Blet%20l%3D%5B%5D%3Bfor(let%20e%20of%20Array.from(document.querySelectorAll(%22.MatchModeQuestionScatterTile%22)))l.push(%7Belement%3Ae%2Ctext%3Ae.querySelector(%22.TermText%22).getAttribute(%22aria-label%22)%7D)%3Bfor(let%20e%20of%20l)%7Blet%20t%3Do.map(n%3D%3E%7Bif(n.term%3D%3De.text)return%7Bmatch%3An.definition%7D%3Bif(n.definition%3D%3De.text)return%7Bmatch%3An.term%7D%7D).filter(n%3D%3En!%3D%3Dvoid%200)%5B0%5D%2Ca%3Dl.filter(n%3D%3En.text%3D%3Dt.match)%2Cm%3Da%5Ba.length-1%5D%3Bfor(e.element.style.border%3D%222px%20solid%20lime%22%2Cm.element.style.border%3D%222px%20solid%20lime%22%3B!e.element.className.includes(%22is-correct%22)%3B)await%20s(100)%7Dbreak%7D%7D%7D)()%3B%7D)()%3B%7D)()%3B">Quizzlet match auto</a>
+<br>
+<a href="javascript:(function()%7Bjavascript%3A(()%3D%3E%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(document.location.host%20!%3D%20'www.blooket.com')%20return%20alert('Drag%20me%20to%20your%20bookmark%20bar%20and%20click%20me%20when%20you%5C're%20in%20a%20game')%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onmessage%20%3D%20(m)%3D%3Eeval(m.data)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20open('https%3A%2F%2Fgbasil.dev%2Fblooket%3Fxenonaut%3Dcool%2527)%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)()%3B%7D)()%3B">Blooket hacks</a>
+
+</body>
+
+<style>
+body {
+  background-color: #3F3F3F;
+  text-align: center;
+}
+
+
+#loadMod {
+  position: absolute;
+  top: 0;
+  display: none;
+  background-color: white;
+}
+
+
+#BookmarkMaker {
+  position: absolute;
+}
+
+#content {
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 50%;
+  height: 600px;
+  position: relative;
+  top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+.app {
+  text-align: center;
+background-color: #3F3F3F;
+font-size: 15px;
+  animation: colorRotate 6s linear 0s infinite;
+  min-height: 45px;
+  min-width: 45px;
+  margin: 10px;
+
+  padding: 5px;
+  border-radius: 100px;
+}
+
+#nav {
+  position: absolute;
+  right: 0;
+}
+
+#settings {
+  position: fixed;
+  top: 50;
+  right: 50;
+  background-color: white;
+  height: 350px;
+  z-index: 9999999999;
+}
+
+
+html,button {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+a {
+    animation: colorRotate 6s linear 0s infinite;    
+}
+ 
+.rainbow {
+  text-align: center;
+
+  font-size: 32px;
+  font-family: monospace;
+
+  animation: colorRotate 6s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
+    </style>
